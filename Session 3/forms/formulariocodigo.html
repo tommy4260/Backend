@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Formulario de registro para el programa CodiGO">
+    <meta name="keywords" content="Registro, Formulario, Cursos">
+    <title>Código - Formulario de Registro</title>
+</head>
+<body>
+    <nav>
+        <strong>CODE</strong>
+        Inicio | Formulario | Contacto | Nosotros
+    </nav>
+    <header>
+        <h1>Formulario de Registro - CodiGO</h1>
+    </header>
+    <main>
+        <section>
+            <div>
+                <h2>Registro de alumno</h2>
+                <form>
+                    <p>
+                        Por favor llenar el formulario con la información solicitada, los campos con * son requeridos de forma obligatoria.
+                    </p>
+                    <fieldset>
+                        <legend>Datos Obligatorios</legend>
+                        <label for="nombres">
+                          Nombres:
+                        </label>
+                        <input 
+                        type="text" 
+                        placeholder="..Ingrese sus nombres"
+                        id="nombres"
+                        
+                        required
+                        pattern="[A-Z a-z]{1,15}"
+                        />
+                        <br/>
+                        <label for="apellidos">
+                          Apellidos:
+                        </label>
+                        <input 
+                        type="text"
+                        placeholder="Ingresa tus apellidos"
+                        id="apellidos"
+                        pattern="[A-Z a-z]+"
+                        required
+                        />
+                        <br/>
+                        <label for="email">
+                          Correo Electrónico:
+                        </label>
+                        <input 
+                        type="email"
+                        placeholder="Ingresa tu correo..."
+                        id="email"
+                        pattern="[A-Za-z0-9]{1,}@[A-Za-z0-9]{1,}.[A-Za-z]{2,]"
+                        required
+                        />
+                        <br/>
+                        <label for="pass">
+                          Contraseña:
+                        </label>
+                        <input 
+                        type="password"
+                        placeholder="Ingresa una contraseña segura"
+                        id="pass"
+                        required
+                        />
+                        <br/>
+                    </fieldset>
+                    <fieldset>
+                      <legend>Datos Adicionales</legend>
+                      <label for="edad">
+                        Edad:
+                      </label>
+                      <input 
+                      type="number" 
+                      id="edad" 
+                      placeholder="Ingresa tu edad"
+                      min="14"
+                      max="65"
+                      />
+                      <br/>
+                      <label for="fijo">
+                        Teléfono Fijo
+                      </label>
+                      <input 
+                      type="tel" 
+                      placeholder="Ej.: 054-674564"
+                      id="fijo"
+                      pattern="[0-9]{2,3}-[0-9]{6,}"
+                      />
+                      <label for="celular">
+                        Teléfono Móvil
+                      </label>
+                      <input
+                      type="number"
+                      placeholder="Ej.: 956706789"
+                      id="celular"
+                      />
+                      <br/>
+                      <label>
+                        Género
+                      </label>
+                      <br/>
+                      <input type="radio" name="genero" value="M"> Hombre<br/>
+                      <input type="radio" name="genero" value="F"> 
+                      Mujer<br/>
+                      <input type="radio" name="genero" value="O"> 
+                      Otro<br/>
+                      <label>
+                        Vivienda
+                      </label>
+                      <br/>
+                      <input type="radio" name="vivienda" value="C">
+                      Casa<br/>
+                      <input type="radio" name="vivienda" value="A">
+                      Apartamento<br/>
+                      <label for="direccion">Dirección:</label>
+                      <input 
+                      type="text" 
+                      id="direccion" 
+                      placeholder="Ingrese su dirección"
+                      value="S/N"
+                      disabled
+                      />
+                      <br/>
+                      <label for="nacimiento">
+                        Fecha de Nacimiento:
+                      </label>
+                      <input 
+                      type="date" 
+                      id="nacimiento" 
+                      min="1950-01-01"
+                      max="2008-12-31">
+                      <br/>
+                      <label for="estadocivil">
+                        Estado Civil
+                      </label>
+                      <select id="estadocivil">
+                        <option value="" selected disabled>Elija una opción...</option>
+                        <option value="S">Soltero</option>
+                        <option value="C">Casado</option>
+                        <option value="ES">Es complicado</option>
+                        <option value="SE">Separado</option>
+                        <option value="D">Divorciado</option>
+                      </select>
+                      <br/>
+                      <label for="hora">Seleccione la hora de su entrevista</label>
+                      <input type="time" id="hora">
+                      <br/>
+                      <label for="url">Ingrese su página personal (Opcional)</label>
+                      <input type="url" id="url">
+                      <br/>
+                      <label for="rango">
+                        Como considera su nivel previo
+                      </label>
+                      <span>min: 0</span>
+                      <input type="range" id="rango" min="0" max="10" step="2">
+                      <span>max: 10</span>
+                    </fieldset>
+                    <fieldset>
+                      <legend>Datos para evaluación psicológica</legend>
+                      <label>
+                        Indique sus Hobbies:
+                      </label>
+                      <input type="checkbox" value="lectura" id="leer">
+                      <label for="leer">
+                        Leer Libros, Revistas, Comics
+                      </label>
+                      <input type="checkbox" value="autos" id="autos">
+                      <label for="autos">
+                        Autos y Mecánica
+                      </label>
+                      <input type="checkbox" value="videojuegos" id="games">
+                      <label for="games">
+                        Me gusta Dotear
+                      </label>
+                      <input type="checkbox" value="peliculas" id="cine">
+                      <label for="cine">
+                        Películas y Documentales
+                      </label>
+                      <input type="checkbox" value="futbol" id="futbol">
+                      <label for="futbol">
+                        Pichanga
+                      </label>
+                      <br/>
+                      <label>Elija su color favorito:</label>
+                      <input type="color">
+                    </fieldset>
+                    <fieldset>
+                      <legend>Comentarios:</legend>
+                      <textarea cols="40" rows="10" placeholder="Escriba aquí sus comentarios..."></textarea>
+                    </fieldset>
+                    <!-- <button type="submit">Enviar mis datos</button> -->
+                    <input type="submit" value="Enviar mis datos"/>
+                </form>
+            </div>
+        </section>
+    </main>
+</body>
+</html>
