@@ -111,7 +111,7 @@ def agregar_usuario():
     # antes de crear el usuario tengo que validar que el tipo de usuario ingresado sea un usuario que existe
     contenido = request.get_json()
     conexionMYSQL = conexion.connection.cursor()
-    conexionMYSQL.execute("SELECT * FROM t_usu WHERE tusu_id="contenido['tipo_usuario'])
+    conexionMYSQL.execute("SELECT * FROM t_usu WHERE tusu_id="contenido ['tipo_usuario'])
     tipos_usuario = conexionMYSQL.fetchone()
     if tipos_usuario:
         # valido que el tipo de usuario ingresado exista
