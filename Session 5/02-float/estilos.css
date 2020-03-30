@@ -1,0 +1,292 @@
+*{
+    margin:0;
+    padding:0;
+    /* box-sizing: border-box; */
+}
+#cabeceralogo{
+    background-color:#4A68FF;
+    height:150px;
+    width:96%;
+    padding:0 2%;
+}
+/* > primeros hijos */
+#cabeceralogo>div{
+    max-width:960px;
+    margin:0 auto;
+    padding-top:45px;
+}
+/* TODOS los h1 */
+#cabeceralogo h1{
+    /* negrita tamaño fuente */
+    font:bold 60px 'Arial','sans-serif';
+    color:white;
+    text-shadow:3px 3px 4px black;
+}
+#menuprincipal{
+    width:96%;
+    padding:0 2%;
+    height:50px;
+    background-color:#3DD2FF;
+    border-top:1px solid #943DFF;
+    border-bottom:1px solid #943DFF;
+}
+#menuprincipal>div{
+    max-width: 960px;
+    margin:0 auto;
+}
+#menuprincipal li{
+    display:inline-block;
+    height:35px;
+    padding:15px 10px 0 10px;
+    margin-right:5px;
+}
+#menuprincipal li:hover{
+    background-color:#943DFF;
+}
+#menuprincipal a{
+    font: bold 18px 'Arial','sans-serif';
+    color:rgb(1, 3, 77);
+    text-decoration: none;
+}
+#menuicono{
+    display:none;
+    width:95%;
+    height:50px;
+    padding: 5px 2% 0 3%;
+    text-align:center;
+    background-color:#3DD2FF;
+    border-top:1px solid #943DFF;
+    border-bottom:1px solid #943DFF;
+}
+main{
+    width:96%;
+    padding:10px 2%;
+    background-image: linear-gradient(0deg,#943DFF,rgb(49, 9, 97));
+}
+main>div{
+    max-width:960px;
+    margin:0 auto;
+}
+#articulosprincipales{
+    float:left;
+    width:65%;
+    padding-top:30px;
+    background-color: white;
+    border-radius:10px;
+}
+#infoadicional{
+    float:right;
+    width:29%;
+    padding:20px;
+    background-color:lightgray;
+    border-radius:10px;
+}
+#infoadicional h2{
+    font: bold 18px 'Arial','sans-serif';
+    color:#333333;
+    margin-bottom:10px;
+}
+#infoadicional p,label{
+    font-family:Arial, Helvetica, sans-serif;
+}
+#infoadicional textarea{
+    width:90%;
+    height:120px;
+}
+#infoadicional input{
+    border:1px solid blue;
+    border-radius:2px;
+    margin:5px 0;
+}
+#infoadicional input[type=text]{
+    height:20px;
+    width:90%;
+}
+#infoadicional input[type=submit]{
+    padding:5px;
+    background-color: skyblue;
+    color:darkblue;
+}
+.recuperar{
+    clear:both;
+}
+
+article{
+    position:relative;
+    padding:0 40px 20px 40px
+}
+
+article time{
+    display:block;
+    position:absolute;
+    top:-5px;
+    left:-70px;
+    width:80px;
+    padding:15px 5px;
+    background-color:#943DFF;
+    box-shadow:3px 3px 5px gray;
+    border-radius:4px;
+}
+.numerodia{
+    font:bold 36px 'Verdana','sans-serif';
+    color:white;
+    text-align:center;
+}
+.nombredia{
+    font:12px 'Verdana','sans-serif';
+    color:white;
+    text-align:center;
+}
+
+article h2{
+    margin-bottom:10px;
+    font:bold 30px 'Verdana','sans-serif';
+}
+
+article p{
+    font:18px 'Arial';
+}
+
+figure{
+    margin:10px;
+}
+
+figure img{
+    max-width:98%;
+    padding:5px;
+    border:1px solid blue;
+    border-radius:3px;
+}
+
+#pielogo{
+    width:96%;
+    padding:2%;
+    background-color:darkblue;
+}
+#pielogo>div{
+    max-width:960px;
+    margin:0 auto;
+    background-color:skyblue;
+    border-radius:10px;
+}
+
+.seccionpie{
+    float:left;
+    width:27.33%;
+    padding:3%;
+}
+.seccionpie h3{
+    font: bold 20px 'Arial','sans-serif';
+}
+
+.seccionpie p{
+    margin-top:5px;
+}
+
+.seccionpie a{
+    font: bold 16px 'Arial','sans-serif';
+    color:gray;
+    text-decoration: none;
+}
+
+#listamenu>li{
+    position:relative;
+    display:inline-block;
+    height:35px;
+    padding:15px 10px 0 10px;
+    margin-right:10px;
+}
+
+#listamenu li>ul{
+    display:none;
+    position: absolute;
+    top:50px;
+    background-color:skyblue;
+    box-shadow: 3px 3px 5px gray;
+    border-radius:0 0 5px 5px;
+    list-style:none;
+    z-index:100;
+}
+/* a los elementos li que pertenezcan a #listamenu cuando el mouse encima, pero vamos a afectar a los ul que esten dentro */
+#listamenu li:hover ul{
+    display:block;
+}
+
+#listamenu li>ul>li{
+    width:120px;
+    height:35px;
+    padding-top:15px;
+    padding-left:10px;
+}
+
+/* INICIO DE MEDIAQUERIES */
+
+@media(max-width:1170px){
+    #cabeceralogo>div{
+        max-width:720px;
+    }
+    #cabeceralogo h1{
+        text-align: center;
+    }
+    article time{
+        /* static va posicionar el elemento donde deberia estar según el html */
+        position:static;
+        width:100%;
+        padding:0%;
+        margin-bottom:10px;
+        background-color: white;
+        box-shadow:0 0 0;
+        border-radius:0;
+    }
+    .numerodia{
+        color:gray;
+        font:bold 14px 'Verdana','sans-serif';
+        display:inline-block;
+        margin-right:5px;
+    }
+    .nombredia{
+        color:gray;
+        font:bold 14px 'Verdana','sans-serif';
+        display:inline-block;
+    }
+    article{
+        /* flexbox */
+        display:flex;
+        /* cambiar la dirección de los elementos */
+        flex-direction:column;
+        /* justificar de forma horizontal, pero si la disposicion fuera flexdirecion:row */
+        justify-content:center;
+        /* utilizamos align items para cenrtrar de forma horizontal porque estamos utilizando flex-direction:column */
+        align-items:center;
+        
+    }
+    #articulosprincipales{
+        display:block;
+        width:100%;
+    }
+
+    #infoadicional{
+        display:block;
+        width:100%;
+        margin-top:10px;
+        box-sizing: border-box;
+        text-align: center;
+    }
+    #infoadicional h2{
+        font-size:28px;
+    }
+    #infoadicional p, label{
+        font-size:21px;
+    }
+}
+
+@media(max-width:576px){
+    #menuprincipal{
+        display:none;
+        height:100%;
+        text-align:center;
+    }
+    #menuicono{
+        display:block;
+    }
+}
